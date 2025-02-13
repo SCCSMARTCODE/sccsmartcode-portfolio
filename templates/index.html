@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmanuel Ayobami | AI Engineer & Developer</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -72,6 +73,7 @@
                 <li data-category="all" class="active">All Projects</li>
                 <li data-category="ai-ml">AI & Machine Learning</li>
                 <li data-category="web-dev">Web Development</li>
+                <li data-category="apis-realtime">APIs & Real-time Apps</li>
             </ul>
         </aside>
 
@@ -89,6 +91,11 @@
                     <p>Advanced computer vision projects with segmentation and object detection.</p>
                     <a href="https://github.com/SCCSMARTCODE/Deep-Learning-01" class="project-link">View on GitHub ↗</a>
                 </div>
+                <div class="project-card" data-category="ai-ml">
+                    <h3>Deep Learning 02</h3>
+                    <p>A collection of deep learning projects focused on sequential data and recurrent networks.</p>
+                    <a href="https://github.com/SCCSMARTCODE/Deep-Learning-02" class="project-link">View on GitHub ↗</a>
+                </div>
 
                 <!-- Web Development Projects -->
                 <div class="project-card" data-category="web-dev">
@@ -100,6 +107,18 @@
                     <h3>EchoDAT</h3>
                     <p>A web app for music groups to enhance collaboration.</p>
                     <a href="https://github.com/SCCSMARTCODE/EchoDAT" class="project-link">View on GitHub ↗</a>
+                </div>
+
+                <!-- APIs & Real-time Apps Projects -->
+                <!-- <div class="project-card" data-category="apis-realtime">
+                    <h3>AuthX</h3>
+                    <p>A versatile authentication API built to work seamlessly with Flask and FastAPI, enhancing security and scalability.</p>
+                    <a href="https://github.com/SCCSMARTCODE/AuthX" class="project-link">View on GitHub ↗</a>
+                </div> -->
+                <div class="project-card" data-category="apis-realtime">
+                    <h3>CChatAPP</h3>
+                    <p>A real-time chat application delivering instant messaging with robust features and a sleek interface.</p>
+                    <a href="https://github.com/SCCSMARTCODE/CChatAPP" class="project-link">View on GitHub ↗</a>
                 </div>
             </div>
         </div>
@@ -132,23 +151,35 @@
         </a>
     </div>
 
+    <!-- Display Success Message If Message Was Sent -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}" id="flashMessage">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
     <!-- Contact Form -->
-    <form class="contact-form">
+    <form class="contact-form" method="post" action="/">
         <h3>Send a Direct Message ✉️</h3>
         <div class="form-group">
-            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
         </div>
         <div class="form-group">
-            <input type="text" id="subject" placeholder="Subject" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
         </div>
         <div class="form-group">
-            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
         </div>
         <button type="submit" class="send-button">🚀 Send Message</button>
     </form>
+
 </section>
 
 
@@ -250,6 +281,19 @@
             }
         });
     });
+
+
+    window.onload = function() {
+      var flash = document.getElementById('flashMessage');
+      if (flash) {
+        setTimeout(function(){
+          flash.classList.add('fade-out');
+        }, 3000);
+        setTimeout(function(){
+          flash.style.display = 'none';
+        }, 4000);
+      }
+    };
 
     </script>
 </body>

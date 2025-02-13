@@ -384,6 +384,7 @@ body {
 }
 
 
+
 /* Contact Section */
 .contact {
     text-align: center;
@@ -432,6 +433,28 @@ body {
     color: #0f172a;
     transform: scale(1.1);
 }
+
+
+/* Flash Message Styles */
+.flash-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #38bdf8;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    z-index: 1000;
+  }
+  .flash-message.fade-out {
+    opacity: 0;
+  }
+
+
 /* Contact Form */
 .contact-form {
     max-width: 60%;
@@ -449,6 +472,7 @@ body {
     color: #38bdf8;
     text-align: center;
 }
+
 
 /* Form Fields */
 .form-group {
@@ -637,3 +661,4 @@ body {
         font-size: 1.2rem;
     }
 }
+
