@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from utils import FormData, send_email
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-load_dotenv()
+# load_dotenv()
 
 
 @app.route('/', methods=['GET', 'POST'])
