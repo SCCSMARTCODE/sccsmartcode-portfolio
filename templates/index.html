@@ -12,289 +12,415 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Emmanuel Ayobami Adewumi</h1>
-        <p class="tagline">AI Engineer | Backend Developer | Innovator</p>
-        <div class="social-links">
-            <a href="https://github.com/SCCSMARTCODE" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/emmanuelayobami" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/SCCSMARTCODE" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="hero-content">
+            <h1 class="hero-title">Emmanuel Ayobami Adewumi</h1>
+            <p class="hero-tagline">AI Engineer | Backend Developer | Innovator</p>
+            <div class="hero-cta">
+                <a href="#contact" class="hero-button">Get in Touch</a>
+                <a href="#projects" class="hero-button hero-button-outline">View Projects</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/SCCSMARTCODE" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/emmanuelayobami" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/SCCSMARTCODE" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
+        <div class="hero-backdrop"></div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+<section class="about" id="about">
+    <div class="container">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <div class="section-line"></div>
+        </div>
+
         <div class="about-container">
             <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                    Driven by a passion for <span>Artificial Intelligence</span>, <span>Machine Learning</span>, and <span>Backend Software Engineering</span>,
-                    Emmanuel Ayobami Adewumi is dedicated to solving complex problems through <span>mathematical reasoning</span> and <span>algorithmic efficiency</span>.
-                    He specializes in <span>neural networks</span>, <span>deep learning architectures</span>, and <span>scalable backend infrastructure</span>,
-                    crafting intelligent systems that seamlessly integrate <span>data science</span> with <span>robust software design</span>.
+                <p class="about-intro">
+                    Driven by a passion for <span class="highlight">Artificial Intelligence</span>, <span class="highlight">Machine Learning</span>, and <span class="highlight">Backend Software Engineering</span>.
                 </p>
-                <p>
-                    With expertise in <span>API design</span>, <span>database optimization</span>, and leveraging AI for technological advancements,
-                    Emmanuel continuously explores cutting-edge innovations to enhance software performance and reliability.
+
+                <p class="about-description">
+                    I am dedicated to solving complex problems through <span class="highlight">mathematical reasoning</span> and <span class="highlight">algorithmic efficiency</span>.
+                    I specialize in <span class="highlight">neural networks</span>, <span class="highlight">deep learning architectures</span>, and <span class="highlight">scalable backend infrastructure</span>,
+                    crafting intelligent systems that seamlessly integrate <span class="highlight">data science</span> with <span class="highlight">robust software design</span>.
                 </p>
+
+                <p class="about-description">
+                    With expertise in <span class="highlight">API design</span>, <span class="highlight">database optimization</span>, and leveraging AI for technological advancements,
+                    I continuously explore cutting-edge innovations to enhance software performance and reliability.
+                </p>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
             </div>
+
             <div class="about-image">
-                <img src="{{ url_for('static', filename='images/IMG_5985.jpg') }}" alt="Emmanuel Ayobami">
+                <div class="profile-container">
+                    <div class="profile-circle"></div>
+                    <div class="profile-img">
+                        <img src="{{ url_for('static', filename='images/IMG_5985.jpg') }}" alt="Emmanuel Ayobami">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Experience Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Software Engineering Intern</h3>
+                        <h4>HNG Internship</h4>
+                        <p>Engaged in the HNG Internship, a dynamic remote program that bridges the gap between learning and professional experience. Collaborated with diverse teams to develop and deploy real-world applications, enhancing skills in software development, version control, and agile methodologies.</p>
+                        <div class="timeline-tags">
+                            <span>FastAPI</span>
+                            <span>Flask</span>
+                            <span>Postgresql</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>2024 - 2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Machine Learning & Deep Learning Trainee</h3>
+                        <h4>Prometheus AI Program</h4>
+                        <p>Completed an intensive program focused on machine learning and deep learning. Gained hands-on experience with model development, training, and deployment. Worked on projects involving natural language processing, large language models, transformers and Computer Vision, utilizing frameworks like PyTorch.</p>
+                        <div class="timeline-tags">
+                            <span>PyTorch</span>
+                            <span>NLP</span>
+                            <span>Transformers</span>
+                            <span>Computer Vision</span>
+                            <span>LLM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>2023 - 2024</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Software Engineering Trainee</h3>
+                        <h4>ALX Africa</h4>
+                        <p>Completed the ALX Software Engineering Program, a rigorous 12-month course designed to develop full-stack engineering skills. Covered foundational and advanced topics, including data structures, algorithms, system design, database management with SQL and PostgreSQL, and containerization with Docker. Engaged in collaborative projects, enhancing problem-solving and teamwork abilities.</p>
+                        <div class="timeline-tags">
+                            <span>Python</span>
+                            <span>C</span>
+                            <span>SQL</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Add more experience items as needed -->
             </div>
         </div>
     </section>
 
 
     <!-- Skills Section -->
-<section class="skills">
-    <h2>Technical Skills</h2>
-    <div class="skill-grid">
-        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-        <div class="skill-item"><i class="fas fa-brain"></i> Deep Learning</div>
-        <div class="skill-item"><i class="fas fa-robot"></i> Machine Learning</div>
-        <div class="skill-item"><i class="fas fa-fire"></i> PyTorch</div>
-        <div class="skill-item"><i class="fas fa-code"></i> C</div>
-        <div class="skill-item"><i class="fas fa-flask"></i> Flask</div>
-        <div class="skill-item"><i class="fas fa-fast-forward"></i> FastAPI</div>
-        <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
-        <div class="skill-item"><i class="fas fa-code-branch"></i> Git</div>
-        <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
-    </div>
-</section>
+    <section class="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-grid">
+            <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-item"><i class="fas fa-brain"></i> Deep Learning</div>
+            <div class="skill-item"><i class="fas fa-robot"></i> Machine Learning</div>
+            <div class="skill-item"><i class="fas fa-fire"></i> PyTorch</div>
+            <div class="skill-item"><i class="fas fa-code"></i> C</div>
+            <div class="skill-item"><i class="fas fa-flask"></i> Flask</div>
+            <div class="skill-item"><i class="fas fa-fast-forward"></i> FastAPI</div>
+            <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+            <div class="skill-item"><i class="fas fa-code-branch"></i> Git</div>
+            <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
+        </div>
+    </section>
 
-<!-- Projects Section -->
-<section class="projects" id="projects">
-    <h2>Featured Projects</h2>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
 
-    <div class="projects-wrapper">
-        <!-- Categories Sidebar -->
-        <aside class="project-categories">
-            <h3>Categories</h3>
-            <ul>
-                <li data-category="all" class="active">All Projects</li>
-                <li data-category="ai-ml">AI & Machine Learning</li>
-                <li data-category="web-dev">Web Development</li>
-                <li data-category="apis-realtime">APIs & Real-time Apps</li>
-            </ul>
-        </aside>
+        <div class="projects-wrapper">
+            <!-- Categories Sidebar -->
+            <aside class="project-categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li data-category="all" class="active">All Projects</li>
+                    <li data-category="ai-ml">AI & Machine Learning</li>
+                    <li data-category="web-dev">Web Development</li>
+                    <li data-category="apis-realtime">APIs & Real-time Apps</li>
+                </ul>
+            </aside>
 
-        <!-- Scrollable Projects Container -->
-        <div class="projects-content">
-            <div class="project-container" id="project-list">
-                <!-- AI & ML Projects -->
-                <div class="project-card" data-category="ai-ml">
-                    <h3>Deep Learning 00</h3>
-                    <p>Image classification using CNNs for accurate categorization.</p>
-                    <a href="https://github.com/SCCSMARTCODE/Deep-Learning-00" class="project-link">View on GitHub ↗</a>
-                </div>
-                <div class="project-card" data-category="ai-ml">
-                    <h3>Deep Learning 01</h3>
-                    <p>Advanced computer vision projects with segmentation and object detection.</p>
-                    <a href="https://github.com/SCCSMARTCODE/Deep-Learning-01" class="project-link">View on GitHub ↗</a>
-                </div>
-                <div class="project-card" data-category="ai-ml">
-                    <h3>Deep Learning 02</h3>
-                    <p>A collection of deep learning projects focused on sequential data and recurrent networks.</p>
-                    <a href="https://github.com/SCCSMARTCODE/Deep-Learning-02" class="project-link">View on GitHub ↗</a>
-                </div>
+            <!-- Scrollable Projects Container -->
+            <div class="projects-content">
+                <div class="project-container" id="project-list">
+                    <!-- AI & ML Projects -->
+                    <div class="project-card" data-category="ai-ml">
+                        <h3>Deep Learning 00</h3>
+                        <p>Image classification using CNNs for accurate categorization.</p>
+                        <a href="https://github.com/SCCSMARTCODE/Deep-Learning-00" class="project-link">View on GitHub ↗</a>
+                    </div>
+                    <div class="project-card" data-category="ai-ml">
+                        <h3>Deep Learning 01</h3>
+                        <p>Advanced computer vision projects with segmentation and object detection.</p>
+                        <a href="https://github.com/SCCSMARTCODE/Deep-Learning-01" class="project-link">View on GitHub ↗</a>
+                    </div>
+                    <div class="project-card" data-category="ai-ml">
+                        <h3>Deep Learning 02</h3>
+                        <p>A collection of deep learning projects focused on sequential data and recurrent networks.</p>
+                        <a href="https://github.com/SCCSMARTCODE/Deep-Learning-02" class="project-link">View on GitHub ↗</a>
+                    </div>
 
-                <!-- Web Development Projects -->
-                <div class="project-card" data-category="web-dev">
-                    <h3>SMP MultiSchool Website</h3>
-                    <p>A platform for digital learning and academic collaboration.</p>
-                    <a href="https://github.com/SCCSMARTCODE/SMP-MultiSchool-Website-Project" class="project-link">View on GitHub ↗</a>
-                </div>
-                <div class="project-card" data-category="web-dev">
-                    <h3>EchoDAT</h3>
-                    <p>A web app for music groups to enhance collaboration.</p>
-                    <a href="https://github.com/SCCSMARTCODE/EchoDAT" class="project-link">View on GitHub ↗</a>
-                </div>
+                    <!-- Web Development Projects -->
+                    <div class="project-card" data-category="web-dev">
+                        <h3>SMP MultiSchool Website</h3>
+                        <p>A platform for digital learning and academic collaboration.</p>
+                        <a href="https://github.com/SCCSMARTCODE/SMP-MultiSchool-Website-Project" class="project-link">View on GitHub ↗</a>
+                    </div>
+                    <div class="project-card" data-category="web-dev">
+                        <h3>EchoDAT</h3>
+                        <p>A web app for music groups to enhance collaboration.</p>
+                        <a href="https://github.com/SCCSMARTCODE/EchoDAT" class="project-link">View on GitHub ↗</a>
+                    </div>
 
-                <!-- APIs & Real-time Apps Projects -->
-                <!-- <div class="project-card" data-category="apis-realtime">
-                    <h3>AuthX</h3>
-                    <p>A versatile authentication API built to work seamlessly with Flask and FastAPI, enhancing security and scalability.</p>
-                    <a href="https://github.com/SCCSMARTCODE/AuthX" class="project-link">View on GitHub ↗</a>
-                </div> -->
-                <div class="project-card" data-category="apis-realtime">
-                    <h3>CChatAPP</h3>
-                    <p>A real-time chat application delivering instant messaging with robust features and a sleek interface.</p>
-                    <a href="https://github.com/SCCSMARTCODE/CChatAPP" class="project-link">View on GitHub ↗</a>
+                    <!-- APIs & Real-time Apps Projects -->
+                    <!-- <div class="project-card" data-category="apis-realtime">
+                        <h3>AuthX</h3>
+                        <p>A versatile authentication API built to work seamlessly with Flask and FastAPI, enhancing security and scalability.</p>
+                        <a href="https://github.com/SCCSMARTCODE/AuthX" class="project-link">View on GitHub ↗</a>
+                    </div> -->
+                    <div class="project-card" data-category="apis-realtime">
+                        <h3>CChatAPP</h3>
+                        <p>A real-time chat application delivering instant messaging with robust features and a sleek interface.</p>
+                        <a href="https://github.com/SCCSMARTCODE/CChatAPP" class="project-link">View on GitHub ↗</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
     <!-- Contact Section -->
-<section class="contact" id="contact">
-    <h2>📬 Get in Touch</h2>
-    <p>Feel free to reach out! Let's build something amazing together. 🚀</p>
+    <section class="contact" id="contact">
+        <h2>📬 Get in Touch</h2>
+        <p>Feel free to reach out! Let's build something amazing together. 🚀</p>
 
-    <!-- Contact Links -->
-    <div class="contact-links">
-        <a href="mailto:sccsmart247@gmail.com" class="contact-item">
-            📧 Email
-        </a>
-        <a href="https://linkedin.com/in/emmanuelayobami" class="contact-item">
-            💼 LinkedIn
-        </a>
-        <a href="https://github.com/SCCSMARTCODE" class="contact-item">
-            🖥️ GitHub
-        </a>
-        <a href="https://www.youtube.com/channel/UC-KNjTsSQGokYvUsz74VVXg" class="contact-item">
-            🎥 YouTube
-        </a>
-        <a href="https://x.com/SCCSMARTCODE" class="contact-item">
-            🐦 X
-        </a>
-    </div>
+        <!-- Contact Links -->
+        <div class="contact-links">
+            <a href="mailto:sccsmart247@gmail.com" class="contact-item">
+                📧 Email
+            </a>
+            <a href="https://linkedin.com/in/emmanuelayobami" class="contact-item">
+                💼 LinkedIn
+            </a>
+            <a href="https://github.com/SCCSMARTCODE" class="contact-item">
+                🖥️ GitHub
+            </a>
+            <a href="https://www.youtube.com/channel/UC-KNjTsSQGokYvUsz74VVXg" class="contact-item">
+                🎥 YouTube
+            </a>
+            <a href="https://x.com/SCCSMARTCODE" class="contact-item">
+                🐦 X
+            </a>
+        </div>
 
-    <!-- Display Success Message If Message Was Sent -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="flash-message {{ category }}" id="flashMessage">
-                    {{ message }}
+        <!-- Display Success Message If Message Was Sent -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}" id="flashMessage">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- Contact Form -->
+        <form class="contact-form" method="post" action="/">
+            <h3>Send a Direct Message ✉️</h3>
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="send-button">🚀 Send Message</button>
+        </form>
+
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Brand Statement -->
+                    <div class="footer-brand">
+                        <h2><span class="emoji">🚀</span> SCCSMARTCODE</h2>
+                        <p>Building intelligent systems, crafting efficient software, and pushing boundaries in AI & backend engineering.</p>
+                        <div class="footer-social-mini">
+                            <a href="https://github.com/SCCSMARTCODE" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/emmanuelayobami" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://x.com/SCCSMARTCODE" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UC-KNjTsSQGokYvUsz74VVXg" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Currently Learning & Working On -->
+                    <div class="footer-learning">
+                        <h3><span class="emoji">📚</span> Currently Exploring</h3>
+                        <ul>
+                            <li><i class="fas fa-circle list-icon"></i> Deep Learning & Model Optimization</li>
+                            <li><i class="fas fa-circle list-icon"></i> Advanced API Design & Microservices</li>
+                            <li><i class="fas fa-circle list-icon"></i> Scalability & System Architecture</li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-links">
+                        <h3><span class="emoji">🔗</span> Quick Links</h3>
+                        <ul>
+                            <li><a href="#about"><i class="fas fa-chevron-right list-icon"></i> About Me</a></li>
+                            <li><a href="#experience"><i class="fas fa-chevron-right list-icon"></i> Experience</a></li>
+                            <li><a href="#projects"><i class="fas fa-chevron-right list-icon"></i> Projects</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-right list-icon"></i> Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="footer-contact">
+                        <h3><span class="emoji">📬</span> Get In Touch</h3>
+                        <ul>
+                            <li>
+                                <a href="mailto:sccsmart247@gmail.com">
+                                    <i class="fas fa-envelope list-icon"></i>
+                                    <span>sccsmart247@gmail.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com/in/emmanuelayobami" target="_blank">
+                                    <i class="fab fa-linkedin list-icon"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/SCCSMARTCODE" target="_blank">
+                                    <i class="fab fa-github list-icon"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-
-    <!-- Contact Form -->
-    <form class="contact-form" method="post" action="/">
-        <h3>Send a Direct Message ✉️</h3>
-        <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group">
-            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="send-button">🚀 Send Message</button>
-    </form>
-
-</section>
-
-
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-content">
-        <!-- Brand Statement -->
-        <div class="footer-brand">
-            <h2>🚀 SCCSMARTCODE</h2>
-            <p>Building intelligent systems, crafting efficient software, and pushing boundaries in AI & backend engineering.</p>
-        </div>
-
-        <!-- Currently Learning & Working On -->
-        <div class="footer-learning">
-            <h3>📚 Currently Exploring</h3>
-            <ul>
-                <li>🔹 Deep Learning & Model Optimization</li>
-                <li>🔹 Advanced API Design & Microservices</li>
-                <li>🔹 Scalability & System Architecture</li>
-            </ul>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-links">
-            <h3>🔗 Quick Links</h3>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Social Media -->
-        <div class="footer-social">
-            <h3>🌎 Connect With Me</h3>
-            <div class="social-icons">
-                <a href="https://linkedin.com/in/emmanuelayobami" class="social-icon">
-                    💼 LinkedIn
-                </a>
-                <a href="https://github.com/SCCSMARTCODE" class="social-icon">
-                    🖥️ GitHub
-                </a>
-                <a href="mailto:sccsmart247@gmail.com" class="social-icon">
-                    📧 Email
-                </a>
-                <a href="https://www.youtube.com/channel/UC-KNjTsSQGokYvUsz74VVXg" class="social-icon">
-                    🎥 YouTube
-                </a>
-                <a href="https://x.com/SCCSMARTCODE" class="social-icon">
-                    🐦 X
-                </a>
             </div>
         </div>
-    </div>
 
-    <!-- Copyright & Fun Animation -->
-    <div class="footer-bottom">
-        <p>© <span id="year"></span> SCCSMARTCODE. Made with ❤️ & Coffee ☕</p>
-    </div>
-</footer>
+        <!-- Copyright & Fun Animation -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="current-year">2023</span> SCCSMARTCODE. Made with <span class="heart">❤️</span> & Coffee <span class="coffee">☕</span></p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Add this script at the end of your body tag -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
+    document.addEventListener("DOMContentLoaded", function () {
+        // Set current year in footer or header
+        const yearEl = document.getElementById("year") || document.getElementById("current-year");
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        document.addEventListener("DOMContentLoaded", function () {
+        // Flash message fade-out
+        document.querySelectorAll('.flash-message').forEach(flash => {
+            setTimeout(() => flash.classList.add('fade-out'), 3000);
+            setTimeout(() => flash.style.display = 'none', 4000);
+        });
+
+        // Project category filtering
         const categoryButtons = document.querySelectorAll(".project-categories li");
         const projectCards = document.querySelectorAll(".project-card");
 
         categoryButtons.forEach(button => {
             button.addEventListener("click", () => {
-                // Remove 'active' from all buttons
                 categoryButtons.forEach(btn => btn.classList.remove("active"));
                 button.classList.add("active");
 
                 const category = button.getAttribute("data-category");
 
                 projectCards.forEach(card => {
-                    if (category === "all" || card.getAttribute("data-category") === category) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
+                    card.style.display = (category === "all" || card.getAttribute("data-category") === category)
+                        ? "block"
+                        : "none";
                 });
             });
         });
-    });
 
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (event) {
-            event.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 50,  // Adjust offset if necessary
-                    behavior: "smooth"
-                });
-            }
+            anchor.addEventListener("click", function (event) {
+                event.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 50,
+                        behavior: "smooth"
+                    });
+                }
+            });
         });
     });
-
-
-    window.onload = function() {
-      var flash = document.getElementById('flashMessage');
-      if (flash) {
-        setTimeout(function(){
-          flash.classList.add('fade-out');
-        }, 3000);
-        setTimeout(function(){
-          flash.style.display = 'none';
-        }, 4000);
-      }
-    };
-
     </script>
+
 </body>
 </html>
