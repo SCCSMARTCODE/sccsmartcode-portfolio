@@ -190,67 +190,146 @@
         </div>
     </section>
 
-    <!-- About Section -->
-<section class="about" id="about">
+    <!-- Mathematical Journey Section -->
+<section class="mathematical-journey" id="about">
     <div class="container">
         <div class="section-header">
-            <h2>About Me</h2>
+            <h2>My Mathematical Journey</h2>
             <div class="section-line"></div>
+            <p class="section-subtitle">From curiosity to cutting-edge AI solutions</p>
         </div>
 
-        <div class="about-container">
-            <div class="about-text">
-                <p class="about-intro">
-                    <strong>🧮 Mathematical Philosophy:</strong> I see <span class="highlight">mathematics as the universal language</span> that describes patterns, 
-                    optimizes systems, and unlocks the secrets of <span class="highlight">artificial intelligence</span>. Every algorithm, neural network, 
-                    and system I build is grounded in <span class="highlight">rigorous mathematical foundations</span>.
-                </p>
-
-                <p class="about-description">
-                    As an <span class="highlight">ALX Graduate</span> and <span class="highlight">PROMETHEUS AI Research Team Member</span>, 
-                    I'm deeply fascinated by the mathematical intuition behind everything we build in technology. 
-                    From the <span class="highlight">linear algebra powering neural networks</span> to the <span class="highlight">calculus optimizing algorithms</span>, 
-                    I believe understanding mathematical foundations is key to innovative problem-solving.
-                </p>
-
-                <p class="about-description">
-                    Currently at <span class="highlight">VingtAI</span> as Product & AI Engineer, I translate <span class="highlight">cutting-edge research papers</span> 
-                    into practical solutions, building production-scale AI systems like <span class="highlight">Inkriv</span>. 
-                    My approach combines <span class="highlight">research-driven development</span> with <span class="highlight">mathematical precision</span>, 
-                    applying advanced mathematics to solve real-world engineering challenges.
-                </p>
-
-                <div class="about-philosophy">
-                    <blockquote>
-                        <em>"The universe cannot be read until we have learned the language and become familiar with the characters in which it is written. 
-                        It is written in mathematical language."</em> - Galileo Galilei
-                    </blockquote>
+        <div class="journey-container">
+            <!-- Mathematical Visualization -->
+            <div class="math-visualization">
+                <div class="equation-container">
+                    <div class="equation active" data-equation="ai">
+                        <span class="math-symbol">∇</span>
+                        <span class="equation-text">f(θ) = ∑ L(y, ŷ)</span>
+                        <span class="equation-label">Neural Network Optimization</span>
+                    </div>
+                    <div class="equation" data-equation="linear">
+                        <span class="math-symbol">Σ</span>
+                        <span class="equation-text">Ax = b</span>
+                        <span class="equation-label">Linear Algebra Foundations</span>
+                    </div>
+                    <div class="equation" data-equation="probability">
+                        <span class="math-symbol">∫</span>
+                        <span class="equation-text">P(A|B) = P(B|A)P(A)/P(B)</span>
+                        <span class="equation-label">Probabilistic Reasoning</span>
+                    </div>
+                    <div class="equation" data-equation="calculus">
+                        <span class="math-symbol">∂</span>
+                        <span class="equation-text">∂f/∂x = lim(h→0) [f(x+h)-f(x)]/h</span>
+                        <span class="equation-label">Derivative Optimization</span>
+                    </div>
                 </div>
-
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">2+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">30+</span>
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Technologies</span>
-                    </div>
+                
+                <!-- Mathematical Concepts Network -->
+                <div class="concepts-network">
+                    <div class="concept-node" data-concept="linear-algebra">Linear Algebra</div>
+                    <div class="concept-node" data-concept="calculus">Calculus</div>
+                    <div class="concept-node" data-concept="statistics">Statistics</div>
+                    <div class="concept-node" data-concept="ai">Machine Learning</div>
+                    <div class="concept-node" data-concept="optimization">Optimization</div>
+                    <div class="connection-line" data-from="linear-algebra" data-to="ai"></div>
+                    <div class="connection-line" data-from="calculus" data-to="optimization"></div>
+                    <div class="connection-line" data-from="statistics" data-to="ai"></div>
+                    <div class="connection-line" data-from="optimization" data-to="ai"></div>
                 </div>
             </div>
 
-            <div class="about-image">
-                <div class="profile-container">
-                    <div class="profile-circle"></div>
-                    <div class="profile-img">
-                        <img src="{{ url_for('static', filename='images/IMG_5985.jpg') }}" alt="Emmanuel Ayobami">
+            <!-- Journey Timeline -->
+            <div class="journey-timeline">
+                <div class="timeline-item" data-phase="awakening">
+                    <div class="timeline-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>🧮 Mathematical Awakening</h3>
+                        <p class="timeline-year">Early Foundation</p>
+                        <p>Discovered that mathematics isn't just numbers—it's the language that describes patterns in nature, 
+                        optimizes complex systems, and forms the backbone of artificial intelligence. This realization shifted 
+                        my perspective from seeing math as abstract to understanding it as the foundation of innovation.</p>
+                        <div class="key-insight">
+                            <strong>Key Insight:</strong> "Mathematics is not just a tool, but the universal language of understanding."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-phase="learning">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>🎓 Structured Learning Philosophy</h3>
+                        <p class="timeline-year">ALX Software Engineering Program</p>
+                        <p>At ALX, I developed a systematic approach to learning: start with mathematical foundations, 
+                        understand the theory deeply, then build practical applications. This methodology helped me 
+                        grasp complex concepts from data structures to machine learning algorithms.</p>
+                        <div class="learning-approach">
+                            <div class="approach-step">1. Mathematical Foundation</div>
+                            <div class="approach-step">2. Theoretical Understanding</div>
+                            <div class="approach-step">3. Practical Implementation</div>
+                            <div class="approach-step">4. Real-world Application</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-phase="research">
+                    <div class="timeline-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>🔬 Research-Driven Mindset</h3>
+                        <p class="timeline-year">PROMETHEUS AI Research Team</p>
+                        <p>Joined PROMETHEUS to dive deep into cutting-edge AI research. Here, I learned to translate 
+                        complex mathematical concepts from research papers into practical implementations, bridging 
+                        the gap between theoretical breakthroughs and production systems.</p>
+                        <div class="research-focus">
+                            <span class="research-tag">Transformer Architecture</span>
+                            <span class="research-tag">Attention Mechanisms</span>
+                            <span class="research-tag">Optimization Theory</span>
+                            <span class="research-tag">Neural Network Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-phase="application">
+                    <div class="timeline-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>🚀 Production-Scale Application</h3>
+                        <p class="timeline-year">VingtAI - Present</p>
+                        <p>Now at VingtAI, I apply mathematical precision to build production AI systems like Inkriv. 
+                        Every architectural decision, from LLM fine-tuning with QLoRA to retrieval system optimization, 
+                        is grounded in mathematical principles and empirical validation.</p>
+                        <div class="current-focus">
+                            <div class="focus-area">
+                                <strong>LLM Mathematics:</strong> Fine-tuning with rank decomposition, attention optimization
+                            </div>
+                            <div class="focus-area">
+                                <strong>System Design:</strong> Mathematical modeling of user behavior and content generation
+                            </div>
+                            <div class="focus-area">
+                                <strong>Research Translation:</strong> Converting SOTA papers into production systems
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Philosophy Quote -->
+        <div class="journey-philosophy">
+            <blockquote>
+                <span class="quote-symbol">"</span>
+                <em>The universe is not only stranger than we imagine, it is stranger than we can imagine. 
+                But mathematics gives us the tools to explore that strangeness systematically.</em>
+                <span class="quote-symbol">"</span>
+                <cite>— My approach to AI engineering</cite>
+            </blockquote>
         </div>
     </div>
 </section>
@@ -408,12 +487,12 @@
                     <button class="filter-btn active" data-category="all">
                         <i class="fas fa-th-large"></i>
                         <span>All</span>
-                        <span class="count">10</span>
+                        <span class="count">11</span>
                     </button>
                     <button class="filter-btn" data-category="ai-ml">
                         <i class="fas fa-brain"></i>
                         <span>AI & ML</span>
-                        <span class="count">7</span>
+                        <span class="count">8</span>
                     </button>
                     <button class="filter-btn" data-category="web-dev">
                         <i class="fas fa-code"></i>
@@ -597,22 +676,33 @@
                                 </span>
                             </div>
                         </div>
-                        <p class="project-description">
-                            Scalable framework for fine-tuning large language models using LoRA and QLoRA techniques. 
-                            Supports 4-bit/8-bit quantization, instruction-tuning workflows, and Hugging Face integration.
+                        <p class="project-description compact">
+                            Scalable framework for fine-tuning LLMs using LoRA and QLoRA with quantization support.
                         </p>
-                        <div class="project-highlights">
-                            <span class="highlight">⚡ QLoRA Optimization</span>
+                        <div class="project-highlights compact">
+                            <span class="highlight">⚡ QLoRA</span>
                             <span class="highlight">📚 Instruction Tuning</span>
-                            <span class="highlight">🔧 Modular Framework</span>
+                        </div>
+                        
+                        <!-- Expandable Details -->
+                        <div class="project-details-expanded" style="display: none;">
+                            <p class="project-description-full">
+                                Scalable framework for fine-tuning large language models using LoRA and QLoRA techniques. 
+                                Supports 4-bit/8-bit quantization, instruction-tuning workflows, and Hugging Face integration.
+                            </p>
+                            <div class="project-highlights-full">
+                                <span class="highlight">⚡ QLoRA Optimization</span>
+                                <span class="highlight">📚 Instruction Tuning</span>
+                                <span class="highlight">🔧 Modular Framework</span>
+                            </div>
                         </div>
                         <div class="project-actions">
                             <a href="https://github.com/SCCSMARTCODE/Deep-Learning-03-LLM-FineTuning" class="btn-primary" target="_blank">
                                 <i class="fab fa-github"></i>
                                 <span>View Code</span>
                             </a>
-                            <button class="btn-secondary project-details-btn" data-project="llm-finetuning">
-                                <i class="fas fa-info-circle"></i>
+                            <button class="btn-secondary expand-details-btn">
+                                <i class="fas fa-chevron-down"></i>
                                 <span>Details</span>
                             </button>
                         </div>
@@ -761,7 +851,7 @@
                 </article>
 
                 <!-- LinguaSync -->
-                <article class="project-card" data-category="ai-ml" data-tags="translation,transformers,flask,docker">
+                <article class="project-card hidden-initially" data-category="ai-ml" data-tags="translation,transformers,flask,docker">
                     <div class="project-image">
                         <div class="project-tech-stack">
                             <span class="tech-tag">Translation</span>
@@ -808,7 +898,7 @@
                 </article>
 
                 <!-- Enhanced AI & ML Projects -->
-                <article class="project-card" data-category="ai-ml" data-tags="pytorch,cnn,image-classification">
+                <article class="project-card hidden-initially" data-category="ai-ml" data-tags="pytorch,cnn,image-classification">
                     <div class="project-image">
                         <div class="project-tech-stack">
                             <span class="tech-tag">PyTorch</span>
@@ -898,7 +988,7 @@
                     </div>
                 </article>
 
-                <article class="project-card" data-category="ai-ml" data-tags="pytorch,rnn,sequential-data">
+                <article class="project-card hidden-initially" data-category="ai-ml" data-tags="pytorch,rnn,sequential-data">
                     <div class="project-image">
                         <div class="project-tech-stack">
                             <span class="tech-tag">RNN</span>
@@ -944,7 +1034,7 @@
                 </article>
 
                 <!-- Web Development Projects -->
-                <article class="project-card" data-category="web-dev" data-tags="flask,education,web-app">
+                <article class="project-card hidden-initially" data-category="web-dev" data-tags="flask,education,web-app">
                     <div class="project-image">
                         <div class="project-tech-stack">
                             <span class="tech-tag">Flask</span>
@@ -989,7 +1079,7 @@
                     </div>
                 </article>
 
-                <article class="project-card" data-category="web-dev" data-tags="web-app,music,collaboration">
+                <article class="project-card hidden-initially" data-category="web-dev" data-tags="web-app,music,collaboration">
                     <div class="project-image">
                         <div class="project-tech-stack">
                             <span class="tech-tag">Web App</span>
@@ -1035,7 +1125,7 @@
                 </article>
 
                 <!-- APIs & Real-time Apps -->
-                <article class="project-card" data-category="apis-realtime" data-tags="realtime,chat,websockets">
+                <article class="project-card hidden-initially" data-category="apis-realtime" data-tags="realtime,chat,websockets">
                     <div class="project-image">
                         <div class="project-tech-stack">
                             <span class="tech-tag">Real-time</span>
@@ -1091,10 +1181,10 @@
             </div>
 
             <!-- Load More Button -->
-            <div class="load-more-container" style="display: none;">
-                <button class="load-more-btn">
-                    <span>Load More Projects</span>
-                    <i class="fas fa-arrow-down"></i>
+            <div class="load-more-container">
+                <button class="load-more-btn" id="load-more-btn">
+                    <span>Show More Projects</span>
+                    <i class="fas fa-chevron-down"></i>
                 </button>
             </div>
         </div>
@@ -1562,14 +1652,99 @@
             }
         }
 
-        // Project details modal (placeholder - you can implement full modal)
-        document.querySelectorAll('.project-details-btn').forEach(button => {
+        // Project expand/collapse functionality
+        document.querySelectorAll('.expand-details-btn, .project-details-btn').forEach(button => {
             button.addEventListener('click', () => {
-                const project = button.getAttribute('data-project');
-                // Implement modal or redirect to project details page
-                console.log(`Show details for project: ${project}`);
+                const projectCard = button.closest('.project-card');
+                const expandedDetails = projectCard.querySelector('.project-details-expanded');
+                
+                // If no expandable details, just return (old project cards)
+                if (!expandedDetails) {
+                    return;
+                }
+                
+                const icon = button.querySelector('i');
+                const span = button.querySelector('span');
+                
+                if (expandedDetails.style.display === 'none' || !expandedDetails.style.display) {
+                    // Expand
+                    expandedDetails.style.display = 'block';
+                    button.classList.add('expanded');
+                    if (icon) {
+                        icon.classList.remove('fa-chevron-down', 'fa-info-circle');
+                        icon.classList.add('fa-chevron-up');
+                    }
+                    if (span) {
+                        span.textContent = 'Hide Details';
+                    }
+                } else {
+                    // Collapse
+                    expandedDetails.style.display = 'none';
+                    button.classList.remove('expanded');
+                    if (icon) {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                    if (span) {
+                        span.textContent = span.textContent.includes('Hide') ? 'View Details' : 'Details';
+                    }
+                }
             });
         });
+
+        // Show More Projects functionality
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const hiddenProjects = document.querySelectorAll('.project-card.hidden-initially');
+        let showingAll = false;
+
+        if (loadMoreBtn && hiddenProjects.length > 0) {
+            loadMoreBtn.addEventListener('click', () => {
+                if (!showingAll) {
+                    // Show hidden projects with stable visibility
+                    hiddenProjects.forEach((project, index) => {
+                        setTimeout(() => {
+                            project.style.display = 'block';
+                            project.style.opacity = '0';
+                            project.style.transform = 'translateY(20px)';
+                            
+                            // Trigger animation
+                            requestAnimationFrame(() => {
+                                project.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                                project.style.opacity = '1';
+                                project.style.transform = 'translateY(0)';
+                            });
+                        }, index * 100); // Stagger animation
+                    });
+                    loadMoreBtn.querySelector('span').textContent = 'Show Less Projects';
+                    loadMoreBtn.querySelector('i').style.transform = 'rotate(180deg)';
+                    showingAll = true;
+                } else {
+                    // Hide projects again with smooth transition
+                    hiddenProjects.forEach((project, index) => {
+                        setTimeout(() => {
+                            project.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                            project.style.opacity = '0';
+                            project.style.transform = 'translateY(-20px)';
+                            
+                            setTimeout(() => {
+                                project.style.display = 'none';
+                            }, 300);
+                        }, index * 50);
+                    });
+                    loadMoreBtn.querySelector('span').textContent = 'Show More Projects';
+                    loadMoreBtn.querySelector('i').style.transform = 'rotate(0deg)';
+                    showingAll = false;
+                    
+                    // Scroll back to projects section
+                    setTimeout(() => {
+                        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+                    }, 200);
+                }
+            });
+        } else if (loadMoreBtn && hiddenProjects.length === 0) {
+            // Hide load more button if no hidden projects
+            loadMoreBtn.style.display = 'none';
+        }
 
         // Initialize
         updateFilterCounts();
@@ -1844,6 +2019,149 @@
             document.querySelectorAll('img[data-src]').forEach(img => {
                 imageObserver.observe(img);
             });
+        }
+
+        // Mathematical Journey Interactive Elements
+        const equations = document.querySelectorAll('.equation');
+        const conceptNodes = document.querySelectorAll('.concept-node');
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        // Equation cycling animation
+        let currentEquationIndex = 0;
+        const cycleEquations = () => {
+            equations.forEach(eq => eq.classList.remove('active'));
+            equations[currentEquationIndex].classList.add('active');
+            currentEquationIndex = (currentEquationIndex + 1) % equations.length;
+        };
+
+        // Start equation cycling
+        if (equations.length > 0) {
+            setInterval(cycleEquations, 3000);
+        }
+
+        // Interactive equation clicking
+        equations.forEach((equation, index) => {
+            equation.addEventListener('click', () => {
+                equations.forEach(eq => eq.classList.remove('active'));
+                equation.classList.add('active');
+                currentEquationIndex = index;
+            });
+        });
+
+        // Concept nodes interaction
+        conceptNodes.forEach(node => {
+            node.addEventListener('mouseenter', () => {
+                const concept = node.dataset.concept;
+                
+                // Highlight related connections
+                document.querySelectorAll(`[data-from="${concept}"], [data-to="${concept}"]`)
+                    .forEach(line => {
+                        line.style.opacity = '1';
+                        line.style.background = 'linear-gradient(90deg, var(--accent), var(--primary))';
+                    });
+                
+                // Show related equation if exists
+                const relatedEquation = document.querySelector(`[data-equation="${concept}"]`);
+                if (relatedEquation) {
+                    equations.forEach(eq => eq.classList.remove('active'));
+                    relatedEquation.classList.add('active');
+                }
+            });
+
+            node.addEventListener('mouseleave', () => {
+                // Reset connections
+                document.querySelectorAll('.connection-line').forEach(line => {
+                    line.style.opacity = '0.6';
+                    line.style.background = 'linear-gradient(90deg, var(--primary), var(--secondary))';
+                });
+            });
+        });
+
+        // Timeline items scroll-triggered animations
+        const timelineObserverOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -10% 0px'
+        };
+
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                    
+                    // Add special effects for different phases
+                    const phase = entry.target.dataset.phase;
+                    const icon = entry.target.querySelector('.timeline-icon');
+                    
+                    setTimeout(() => {
+                        icon.style.animation = 'mathematicalPulse 2s infinite';
+                    }, 500);
+                }
+            });
+        }, timelineObserverOptions);
+
+        timelineItems.forEach(item => {
+            timelineObserver.observe(item);
+        });
+
+        // Dynamic mathematical formulas
+        const mathSymbols = ['∇', '∑', '∫', '∂', '∞', 'π', 'θ', 'σ', 'μ', 'λ'];
+        const createFloatingSymbol = () => {
+            const symbol = document.createElement('div');
+            symbol.className = 'floating-math-symbol';
+            symbol.textContent = mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
+            symbol.style.cssText = `
+                position: absolute;
+                font-size: ${Math.random() * 20 + 15}px;
+                color: rgba(0, 212, 255, ${Math.random() * 0.3 + 0.1});
+                pointer-events: none;
+                z-index: 1;
+                animation: floatUp 6s linear forwards;
+                left: ${Math.random() * 100}%;
+                top: 100%;
+            `;
+
+            const journeySection = document.querySelector('.mathematical-journey');
+            if (journeySection) {
+                journeySection.appendChild(symbol);
+                
+                setTimeout(() => {
+                    symbol.remove();
+                }, 6000);
+            }
+        };
+
+        // Add floating symbols periodically
+        setInterval(createFloatingSymbol, 4000);
+
+        // Add CSS for floating animation
+        if (!document.querySelector('#floating-animation-style')) {
+            const style = document.createElement('style');
+            style.id = 'floating-animation-style';
+            style.textContent = `
+                @keyframes floatUp {
+                    0% {
+                        transform: translateY(0) rotate(0deg);
+                        opacity: 0;
+                    }
+                    10% {
+                        opacity: 1;
+                    }
+                    90% {
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: translateY(-100vh) rotate(360deg);
+                        opacity: 0;
+                    }
+                }
+                .floating-math-symbol {
+                    font-family: 'JetBrains Mono', monospace;
+                    font-weight: bold;
+                    text-shadow: 0 0 10px currentColor;
+                }
+            `;
+            document.head.appendChild(style);
         }
     });
     </script>
