@@ -1786,17 +1786,43 @@ img.lazy.loaded {
 
 .timeline-date {
   position: absolute;
-  width: 150px;
-  padding: 0.5rem 1rem;
-  background: var(--gradient-primary);
-  color: var(--light);
-  border-radius: 30px;
+  width: 140px;
+  height: 40px;
+  /* background: #ffffff; */
+  border-radius: 8px;
   text-align: center;
-  font-weight: 600;
-  top: 2.2rem;
+  font-weight: 900;
+  font-size: 14px;
+  top: 20px;
   left: calc(50% - 180px);
   transform: translateX(-50%);
-  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #00d4ff;
+  line-height: 1;
+  z-index: 3;
+}
+
+.timeline-date span {
+  color: white !important;
+  font-weight: 900 !important;
+  font-size: 14px !important;
+  display: inline-block !important;
+  line-height: 1 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 2 !important;
+}
+
+/* Light mode timeline date */
+[data-theme="light"] .timeline-date {
+  background: #000000;
+  border: 3px solid #00d4ff;
+}
+
+[data-theme="light"] .timeline-date span {
+  color: white !important;
 }
 
 .timeline-content {
@@ -1836,6 +1862,11 @@ img.lazy.loaded {
 .timeline-item:nth-child(even) .timeline-content {
   margin-left: 0;
   margin-right: auto;
+}
+
+.timeline-date:hover {
+  background: #f0f0f0;
+  border-color: #33ddff;
 }
 
 .timeline-item:nth-child(even) .timeline-date {
@@ -3156,15 +3187,15 @@ img.lazy.loaded {
   }
 }
 
-/* Mathematical Journey Section */
-.mathematical-journey {
+/* About Me Section */
+.about-me-section {
   padding: var(--spacing-section) 0;
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
   position: relative;
   overflow: hidden;
 }
 
-.mathematical-journey::before {
+.about-me-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -3177,124 +3208,366 @@ img.lazy.loaded {
   pointer-events: none;
 }
 
-.journey-container {
+.about-container {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--spacing-xl);
-  align-items: start;
+  align-items: stretch;
   position: relative;
   z-index: 2;
+  min-height: 800px;
 }
 
-/* Mathematical Visualization */
-.math-visualization {
-  position: sticky;
-  top: var(--spacing-xl);
+/* Interactive Skills Game */
+.interactive-skills-game {
   background: var(--bg-glass);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-xl);
   box-shadow: var(--shadow-lg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.equation-container {
+.game-header {
+  text-align: center;
   margin-bottom: var(--spacing-xl);
 }
 
-.equation {
+.game-header h3 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.game-header p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Skills Game Board */
+.skills-game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex: 1;
+}
+
+.skill-orb {
+  background: var(--bg-glass);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--border-radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  opacity: 0.6;
-  transform: translateY(10px);
-  transition: all 0.4s ease;
+  justify-content: center;
   cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  opacity: 0.7;
+  transform: scale(0.95);
 }
 
-.equation.active {
+.skill-orb.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1);
+  border-color: var(--primary);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
   background: rgba(0, 212, 255, 0.1);
+}
+
+.skill-orb:hover {
+  opacity: 1;
+  transform: scale(1.05);
   border-color: var(--primary);
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
-.math-symbol {
-  font-size: 2.5rem;
-  font-weight: 700;
+.orb-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.orb-inner i {
+  font-size: 2rem;
   color: var(--primary);
-  margin-bottom: var(--spacing-sm);
+  transition: all 0.3s ease;
+}
+
+.skill-orb.active .orb-inner i {
+  color: var(--primary-light);
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-.equation-text {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.1rem;
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-xs);
-  text-align: center;
-}
-
-.equation-label {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  text-align: center;
-}
-
-/* Concepts Network */
-.concepts-network {
-  position: relative;
-  height: 300px;
-  margin-top: var(--spacing-lg);
-}
-
-.concept-node {
-  position: absolute;
-  background: var(--bg-glass);
-  border: 2px solid var(--primary);
-  border-radius: 50px;
-  padding: var(--spacing-sm) var(--spacing-md);
+.skill-label {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-primary);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 3;
+  text-align: center;
 }
 
-.concept-node:hover {
-  background: var(--primary);
-  color: var(--bg-primary);
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-}
-
-.concept-node[data-concept="linear-algebra"] { top: 20px; left: 20px; }
-.concept-node[data-concept="calculus"] { top: 80px; right: 40px; }
-.concept-node[data-concept="statistics"] { bottom: 100px; left: 10px; }
-.concept-node[data-concept="ai"] { bottom: 20px; right: 20px; background: var(--secondary); border-color: var(--secondary); }
-.concept-node[data-concept="optimization"] { top: 50%; left: 50%; transform: translate(-50%, -50%); }
-
-.connection-line {
+.skill-progress {
   position: absolute;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  opacity: 0.6;
-  z-index: 1;
-  transition: opacity 0.3s ease;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
 }
 
-/* Journey Timeline */
-.journey-timeline {
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-radius: 2px;
+  transition: width 0.8s ease;
+  animation: progressGlow 2s infinite alternate;
+}
+
+@keyframes progressGlow {
+  0% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.3); }
+  100% { box-shadow: 0 0 15px rgba(0, 212, 255, 0.6); }
+}
+
+/* Skill Detail Display */
+.skill-detail-display {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-detail {
+  display: none;
+  animation: fadeInUp 0.5s ease;
+}
+
+.skill-detail.active {
+  display: block;
+}
+
+.skill-detail h4 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.skill-detail p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.tech-stack span {
+  background: var(--primary);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* About Me Left Section */
+.about-left-section {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
+}
+
+/* About Me Right Section */
+.about-right-section {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.about-intro h3 {
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.intro-text {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-philosophy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.philosophy-card {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.philosophy-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.philosophy-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.philosophy-icon i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.philosophy-content h4 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.philosophy-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.about-achievements h4 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--primary);
+}
+
+.achievement-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.achievement-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-text strong {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.achievement-text span {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.about-approach h4 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.approach-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.step-content strong {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .timeline-item {
@@ -3452,14 +3725,14 @@ img.lazy.loaded {
 }
 
 /* Philosophy Quote */
-.journey-philosophy {
+.about-philosophy-quote {
   margin-top: var(--spacing-xl);
   text-align: center;
   position: relative;
   z-index: 2;
 }
 
-.journey-philosophy blockquote {
+.about-philosophy-quote blockquote {
   background: var(--bg-glass);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -3480,12 +3753,12 @@ img.lazy.loaded {
   opacity: 0.7;
 }
 
-.journey-philosophy em {
+.about-philosophy-quote em {
   color: var(--text-primary);
   font-style: italic;
 }
 
-.journey-philosophy cite {
+.about-philosophy-quote cite {
   display: block;
   margin-top: var(--spacing-md);
   color: var(--text-secondary);
@@ -3512,42 +3785,42 @@ img.lazy.loaded {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .journey-container {
+  .about-container {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
+    min-height: auto;
   }
   
-  .math-visualization {
-    position: relative;
-    top: auto;
+  .interactive-skills-game {
+    height: auto;
   }
   
-  .concepts-network {
-    height: 250px;
+  .skills-game-board {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .timeline-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .skills-game-board {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
   }
   
-  .timeline-content::before {
-    display: none;
-  }
-  
-  .learning-approach {
+  .achievements-grid {
     grid-template-columns: 1fr;
   }
   
-  .equation-text {
-    font-size: 0.9rem;
+  .about-intro h3 {
+    font-size: 1.5rem;
   }
   
-  .math-symbol {
-    font-size: 2rem;
+  .intro-text {
+    font-size: 1rem;
+  }
+  
+  .philosophy-card {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
